@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>Todo list</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="todo">
+			<div class="container">
+				<div class="todo__body" id="body">
+					<div class="todo__title">TODO LIST</div>
+
+					<form class="todo__form form" id="form">
+						<input class="form__input" id="input" type="text" placeholder="Text of your task" size="1" autofocus
+							autocomplete="off">
+						<button class="form__button" type="submit">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect x="9" width="2" height="20" rx="1" fill="#00204C" />
+								<rect x="20" y="9" width="2" height="20" rx="1" transform="rotate(90 20 9)" fill="#00204C" />
+							</svg>
+						</button>
+						<div class="form__notification form__notification--hidden" id="notification">
+							You can't add an empty value as a task!
+						</div>
+					</form>
+
+					<div class="todo__tabs tabs">
+						<ul class="tabs__list" id="tabs-list">
+							<li class="tabs__item">
+								<button class="tabs__button tabs__button--active" id="tab-all" type="button">All</button>
+							</li>
+							<li class="tabs__item">
+								<button class="tabs__button" id="tab-active" type="button">Active</button>
+							</li>
+							<li class="tabs__item">
+								<button class="tabs__button" id="tab-completed" type="button">Completed</button>
+							</li>
+						</ul>
+						<div class="tabs__panels panels">
+							<ul class="panels__list" id="panels-list">
+							</ul>
+						</div>
+					</div>
+
+					<div class="todo__clear-completed">
+						<button class="todo__clear-completed-button" id="clear-completed" type="button" disabled>
+							Clear completed
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
